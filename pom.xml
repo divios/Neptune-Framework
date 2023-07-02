@@ -15,11 +15,20 @@
         <lombok.version>1.18.24</lombok.version>
         <google.guice.version>5.1.0</google.guice.version>
         <spigot-api.version>1.12.2-R0.1-SNAPSHOT</spigot-api.version>
+        <bukkit.version>1.12.2-R0.1-SNAPSHOT</bukkit.version>
         <netflix.governator.version>1.17.12</netflix.governator.version>
         <org.reflections.version>0.10.2</org.reflections.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -35,6 +44,12 @@
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>${spigot-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>bukkit</artifactId>
+            <version>${bukkit.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
